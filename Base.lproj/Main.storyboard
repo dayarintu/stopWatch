@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop" translatesAutoresizingMaskIntoConstraints="NO" id="R4r-Qf-0V3">
+                                <rect key="frame" x="152" y="37" width="272" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="hHt-UA-2hf"/>
+                                    <constraint firstAttribute="width" constant="272" id="u1W-ne-NaB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rap-qS-8pu">
+                                <rect key="frame" x="231" y="116" width="115" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="Hxy-5T-ajL"/>
+                                    <constraint firstAttribute="height" constant="65" id="waR-IU-XC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-gC-nEj">
+                                <rect key="frame" x="20" y="502" width="103" height="78"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Start"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0vc-Ii-aC1"/>
+                                    <constraint firstAttribute="height" constant="78" id="6a4-UL-VFa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="27"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0vc-Ii-aC1"/>
+                                        <exclude reference="6a4-UL-VFa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="0vc-Ii-aC1"/>
+                                        <include reference="6a4-UL-VFa"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYy-mT-4fu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1i-aU-upc">
+                                <rect key="frame" x="477" y="502" width="103" height="78"/>
+                                <color key="backgroundColor" red="1" green="0.079076849790000001" blue="0.1132423179" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ign-6T-cer"/>
+                                    <constraint firstAttribute="height" constant="78" id="v9X-bR-Aid"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="27"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ign-6T-cer"/>
+                                        <exclude reference="v9X-bR-Aid"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ign-6T-cer"/>
+                                        <include reference="v9X-bR-Aid"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tov-vF-Ibw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8G-2H-RkV">
+                                <rect key="frame" x="183" y="329" width="210" height="78"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="WFc-Ne-QTr"/>
+                                    <constraint firstAttribute="height" constant="78" id="WpN-eK-IkS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="27"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WFc-Ne-QTr"/>
+                                        <exclude reference="WpN-eK-IkS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="WFc-Ne-QTr"/>
+                                        <include reference="WpN-eK-IkS"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5e-R6-5jL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T8G-2H-RkV" firstAttribute="centerX" secondItem="Rap-qS-8pu" secondAttribute="centerX" id="BXi-da-FXX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C1i-aU-upc" secondAttribute="bottom" constant="20" id="HmI-BI-58s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XLP-gC-nEj" secondAttribute="bottom" constant="20" id="LNT-6r-ZNQ"/>
+                            <constraint firstItem="R4r-Qf-0V3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="P08-g3-Tzo"/>
+                            <constraint firstItem="XLP-gC-nEj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TvW-f7-MsQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T8G-2H-RkV" secondAttribute="bottom" constant="300" id="a9r-i1-ObH">
+                                <variation key="heightClass=regular" constant="122"/>
+                            </constraint>
+                            <constraint firstItem="C1i-aU-upc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="b64-wR-fRS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T8G-2H-RkV" secondAttribute="bottom" constant="300" id="e2b-nG-j8Z">
+                                <variation key="heightClass=regular" constant="122"/>
+                            </constraint>
+                            <constraint firstItem="Rap-qS-8pu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="juD-wC-bpa"/>
+                            <constraint firstItem="R4r-Qf-0V3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-12" id="qoe-uG-M02"/>
+                            <constraint firstItem="Rap-qS-8pu" firstAttribute="centerX" secondItem="R4r-Qf-0V3" secondAttribute="centerX" id="x22-gs-N4K"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BXi-da-FXX"/>
+                                <exclude reference="TvW-f7-MsQ"/>
+                                <exclude reference="HmI-BI-58s"/>
+                                <exclude reference="LNT-6r-ZNQ"/>
+                                <exclude reference="a9r-i1-ObH"/>
+                                <exclude reference="e2b-nG-j8Z"/>
+                                <exclude reference="b64-wR-fRS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="BXi-da-FXX"/>
+                                <include reference="TvW-f7-MsQ"/>
+                                <include reference="HmI-BI-58s"/>
+                                <include reference="LNT-6r-ZNQ"/>
+                                <include reference="a9r-i1-ObH"/>
+                                <include reference="e2b-nG-j8Z"/>
+                                <include reference="b64-wR-fRS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="Rap-qS-8pu" id="cKH-19-fzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="397.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="stop" width="600" height="600"/>
+    </resources>
+</document>
